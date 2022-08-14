@@ -1,0 +1,21 @@
+{
+  "name": "yeah-time-tracking-one-thing-bridge",
+  "version": "1.0.0",
+  "description": "",
+  "author": "flashback2k14",
+  "license": "MIT",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "npm install",
+    "start": "node index.js",
+    "launchd:init": "cp launchd/com.yeahdev.yeah-time-tracking-one-thing-bridge.plist ~/Library/LaunchAgents/com.yeahdev.yeah-time-tracking-one-thing-bridge.plist",
+    "launchd:load": "launchctl load ~/Library/LaunchAgents/com.yeahdev.yeah-time-tracking-one-thing-bridge.plist",
+    "launchd:unload": "launchctl unload ~/Library/LaunchAgents/com.yeahdev.yeah-time-tracking-one-thing-bridge.plist"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "node-fetch": "^3.2.10",
+    "one-thing": "^1.2.0"
+  }
+}

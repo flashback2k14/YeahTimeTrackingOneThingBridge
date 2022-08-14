@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+    <dict>
+        <key>Label</key>
+        <string>com.yeahdev.yeah-time-tracking-one-thing-bridge.plist</string>
+
+        <key>RunAtLoad</key>
+        <true/>
+
+        <key>StartInterval</key>
+        <integer>300</integer>
+
+        <key>StandardErrorPath</key>
+        <string>/Users/flbk/Documents/Development/YeahTimeTrackingOneThingBridge/output/stderr.log</string>
+
+        <key>StandardOutPath</key>
+        <string>/Users/flbk/Documents/Development/YeahTimeTrackingOneThingBridge/output/stdout.log</string>
+
+        <key>EnvironmentVariables</key>
+        <dict>
+            <key>PATH</key>
+            <string><![CDATA[/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin]]></string>
+        </dict>
+
+        <key>WorkingDirectory</key>
+        <string>/Users/flbk/Documents/Development/YeahTimeTrackingOneThingBridge</string>
+
+        <key>ProgramArguments</key>
+        <array>
+            <string>/Users/flbk/.nvm/versions/node/v16.2.0/bin/node</string>
+            <string>index.js</string>
+        </array>
+
+    </dict>
+</plist>
