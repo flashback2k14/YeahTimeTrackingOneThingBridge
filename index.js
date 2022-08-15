@@ -8,7 +8,7 @@ const headers = {
 };
 
 try {
-  console.log('starting...');
+  console.log(`${new Date().toISOString()}: starting...`);
 
   const res = await fetch(`${process.env.URL}${process.env.ROUTE}`, { headers });
   const { active_tasks } = await res.json();
@@ -16,11 +16,11 @@ try {
   if ((active_tasks?.length ?? -1) > 0) {
     await oneThing(active_tasks.join(','));
   } else {
-    console.log('no active tasks found.');
+    console.log(`${new Date().toISOString()}: no active tasks found.`);
     await oneThing('carpe diam');
   }
 
-  console.log('finished');
+  console.log(`${new Date().toISOString()}: finished`);
 } catch (error) {
   console.error(error);
 }
