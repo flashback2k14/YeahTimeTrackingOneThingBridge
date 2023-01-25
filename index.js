@@ -14,10 +14,10 @@ try {
   const { active_tasks } = await res.json();
 
   if ((active_tasks?.length ?? -1) > 0) {
-    await oneThing(active_tasks.join(','));
+    await oneThing(active_tasks.join(',').replaceAll("-", " "));
   } else {
     console.log(`${new Date().toISOString()}: no active tasks found.`);
-    await oneThing('carpe diam');
+    await oneThing('carpe diem');
   }
 
   console.log(`${new Date().toISOString()}: finished`);
