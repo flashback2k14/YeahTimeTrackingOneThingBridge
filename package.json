@@ -11,7 +11,8 @@
     "start": "node index.js",
     "launchd:init": "cp launchd/com.yeahdev.yeah-time-tracking-one-thing-bridge.plist ~/Library/LaunchAgents/com.yeahdev.yeah-time-tracking-one-thing-bridge.plist",
     "launchd:load": "launchctl load ~/Library/LaunchAgents/com.yeahdev.yeah-time-tracking-one-thing-bridge.plist",
-    "launchd:unload": "launchctl unload ~/Library/LaunchAgents/com.yeahdev.yeah-time-tracking-one-thing-bridge.plist"
+    "launchd:unload": "launchctl unload ~/Library/LaunchAgents/com.yeahdev.yeah-time-tracking-one-thing-bridge.plist",
+    "launchd:restart": "npm run launchd:unload && npm run launchd:load"
   },
   "dependencies": {
     "dotenv": "^16.0.1",
